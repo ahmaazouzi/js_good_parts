@@ -7,5 +7,7 @@ Probably notes on **Crockford's** famed **_Javascript, the Good Parts!_**
 - Lambdas were built into the language from the beginning. They are a good parts.
 - Other good parts include: loose typing, dynamic objects, an expressive object literal notation.
 - Bad parts include global variables.
-
+## Chapter 2: Grammar
+- a block inclosed by squiggly bracket **DOES NOT** create a new scope.
+ 
 
