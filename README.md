@@ -1,5 +1,17 @@
 # js_good_parts
+
 Notes on or summary of **Crockford's** famed **_Javascript, the Good Parts!_** This can be read as a preview of what I think is a worth reading book. Does JSTGP really needs a summary? It's one of the thinnest programming books out there. I would encourage all users of js to read this book. It's not only informative and short. It's very funny and the writing is very clear and to the point.
+
+[Chapter 1: Good Parts](##-Chapter-1:-Good-Parts)
+[Chapter 2: Grammar](##-Chapter-2:-Grammar) 
+[Chapter 3: Objects](##-Chapter-3:-Objects)
+[Chapter 4: Functions](##-Chapter-4:-Functions)
+[Chapter 5: Inheritance](##-Chapter-5:-Inheritance)
+[Chapter 6: Arrays](##-Chapter-6:-Arrays)
+[Chapter 7: Regular Expressions](##-Chapter-7:-Regular-Expressions)
+[Chapter 8: Methods](##-Chapter-8:-Methods)
+[Chapter 9: Style](##-Chapter-9:-Style)
+[Chapter 10: Beautiful Parts](##-Chapter-10:-Beautiful-Parts)
 
 ## Chapter 1: Good Parts
 - Javascript is a beautiful language buried under a "steaming pile of good intetions and blunders."
@@ -58,10 +70,9 @@ book1: {
 	"edition": 2
 }
 ```
+- property "names are treated as literal names, not as variable names," (I have no idea what this means. It might have to do with the fact that trying to extract the value of a propertu using brackets requires the use of a string for the property name, not plain name).
 
-
-
-
+## Chapter 3: Objects
 
 ## Chapter 4: Functions
 
