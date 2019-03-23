@@ -73,6 +73,9 @@ book1: {
 - property "names are treated as literal names, not as variable names," (I have no idea what this means. It might have to do with the fact that trying to extract the value of a propertu using brackets requires the use of a string for the property name, not plain name).
 
 ## Chapter 3: Objects
+- types like number, string are object-like in that they have methods, but they are immutable. Objects like functions, arrays and objects are **"mutable keyed collections."**
+- An object is a container of properties. Each property has a name and a value. A name     vv  can be any string including an empty string. A value can be of any value except _underfined.-
+- Prototype linkeage allows an object to inherit the properties of another onject.
 
 ## Chapter 4: Functions
 
