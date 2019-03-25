@@ -79,7 +79,18 @@ book1: {
 
 ### Object Literals:
 - Objects can be nested.
-- Property names must be enclosed in quotes if they are not legal or are reserved names. 
+- Property names must be enclosed in quotes if they are not legal or are reserved names.
+
+### Objects Behavior: 
+- **Retrieving** data can always be done using **bracket notation.** If the property name is a string literal, a legal js name and not a reserved word, **dot notation** can be used to retrieve it.
+- Trying to retrieve a non-existent property will result in **_undefined_**.
+- Trying to retrieve data from undefined, results in error. By using **_&&_** operator, an errer can be avoided. Try to retrieve the property and (&&) nested properties to get undefined behavior instead of error.
+- **Updating** a property's value can be done using assignment with both bracket and dot notation. If the property exists, it's old value is replaced. If it doesn't exist, the property is added to the object.
+- Objects are **passed around by reference.**
+
+### Prototype:
+
+
 
 
 ## Chapter 4: Functions
