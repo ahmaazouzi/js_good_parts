@@ -77,6 +77,11 @@ book1: {
 - An object is a container of properties. Each property has a name and a value. A name     vv  can be any string including an empty string. A value can be of any value except _underfined.-
 - Prototype linkeage allows an object to inherit the properties of another onject.
 
+### Object Literals:
+- Objects can be nested.
+- Property names must be enclosed in quotes if they are not legal or are reserved names. 
+
+
 ## Chapter 4: Functions
 
 ## Chapter 5: Inheritance
