@@ -2,7 +2,7 @@
 
 Notes on or summary of **Crockford's** famed **_Javascript, the Good Parts!_** This can be read as a preview of what I think is a worth reading book. Does JSTGP really needs a summary? It's one of the thinnest programming books out there. I would encourage all users of js to read this book. It's not only informative and short. It's very funny and the writing is very clear and to the point.
 
-[Chapter 1: Good Parts](#chapter-1:-good-parts)
+[Chapter 1: Good Parts](#chapter-1-good-parts)
 [Chapter 1: Good Parts](##-Chapter-1:-Good-Parts)
 [Chapter 2: Grammar](##-Chapter-2:-Grammar) 
 [Chapter 3: Objects](##-Chapter-3:-Objects)
