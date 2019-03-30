@@ -74,7 +74,7 @@ book1: {
 
 ## Chapter 3: Objects
 - types like number, string are object-like in that they have methods, but they are immutable. Objects like functions, arrays and objects are **"mutable keyed collections."**
-- An object is a container of properties. Each property has a name and a value. A name     vv  can be any string including an empty string. A value can be of any value except _underfined.-
+- An object is a container of properties. Each property has a name and a value. A name can be any string including an empty string. A value can be of any value except _underfined.-
 - Prototype linkeage allows an object to inherit the properties of another onject.
 
 ### Object Literals:
@@ -89,6 +89,20 @@ book1: {
 - Objects are **passed around by reference.**
 
 ### Prototype:
+- "Every object is linked to a prototype object from which it can inherit properties."
+- Object literals are linked to **Object.prototype**.
+- The javascript **Object** object (or function???) has a method **create** which is used to create a new object using an "old object as its prototype" as in:
+```
+var book2 = Object.create(book1); // Now book2 has all the properties of book1
+```
+- Did the Object object (or function) have a create method when the book was written??!!
+- Changing the property of an object doesn't affect the prototype (Sounds too obvious from an OOP perspective).
+- **Delecation:*** If your try to retrieve a property from an object and the object doesn't have that property name, js looks at that object's prototype and sees if it has that property to retrieve its value. This process will continue until **Object.protptype** is reached reached. If the property name is not found in the prototype chain, the resulting value is **undefined**.
+- If a property is added to a prototype, it's immediately visible to all the objects derived from it.
+
+## Reflection:
+- The **typeof** operator is used to get the properties of a property.
+- 
 
 
 
