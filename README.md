@@ -100,12 +100,27 @@ var book2 = Object.create(book1); // Now book2 has all the properties of book1
 - **Delecation:*** If your try to retrieve a property from an object and the object doesn't have that property name, js looks at that object's prototype and sees if it has that property to retrieve its value. This process will continue until **Object.protptype** is reached reached. If the property name is not found in the prototype chain, the resulting value is **undefined**.
 - If a property is added to a prototype, it's immediately visible to all the objects derived from it.
 
-## Reflection:
+### Reflection:
 - The **typeof** operator is used to get the properties of a property.
-- 
+- **hasOwnProperty** method filters out properties derived from the prototype chain.
 
+### Enumeration:
+- An object's properties can be enumerated using the **for .. in**m statement.
+- Sounds like ES5 doesn't suffer from some of the issues mentioned in this section like the fact that all properties would be listed, including fuctions inherited from Object. 
 
+### Delete:
+- Delete removes a property from an object but doesn't affect the prototype linkeage. If the property removed is present in the prototype chain, the value of that property "shines through."
 
+### Global Abatment:
+- Global variables are the bane of javascript. To reduce the problems associated with that, a single global variable can be created for the whole application. That single global should act as a container for the app. This is seems to be a standard practice nowadays with the use of app or APP in js applications.
+
+```
+var APP = {};
+
+APP.books = {
+	something: "Something"
+}
+```
 
 ## Chapter 4: Functions
 
