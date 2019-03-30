@@ -2,17 +2,16 @@
 
 Notes on or summary of **Crockford's** famed **_Javascript, the Good Parts!_** This can be read as a preview of what I think is a worth reading book. Does JSTGP really needs a summary? It's one of the thinnest programming books out there. I would encourage all users of js to read this book. It's not only informative and short. It's very funny and the writing is very clear and to the point.
 
-[Chapter 1: Good Parts](#chapter-1-good-parts)
-[Chapter 1: Good Parts](##-Chapter-1:-Good-Parts)
-[Chapter 2: Grammar](##-Chapter-2:-Grammar) 
-[Chapter 3: Objects](##-Chapter-3:-Objects)
-[Chapter 4: Functions](##-Chapter-4:-Functions)
-[Chapter 5: Inheritance](##-Chapter-5:-Inheritance)
-[Chapter 6: Arrays](##-Chapter-6:-Arrays)
-[Chapter 7: Regular Expressions](##-Chapter-7:-Regular-Expressions)
-[Chapter 8: Methods](##-Chapter-8:-Methods)
-[Chapter 9: Style](##-Chapter-9:-Style)
-[Chapter 10: Beautiful Parts](##-Chapter-10:-Beautiful-Parts)
+- [Chapter 1: Good Parts](#chapter-1-good-parts)
+- [Chapter 2: Grammar](#chapter-2-grammar) 
+- [Chapter 3: Objects](#chapter-3-objects)
+- [Chapter 4: Functions](#-chapter-4-functions)
+- [Chapter 5: Inheritance](#-chapter-5-inheritance)
+- [Chapter 6: Arrays](#chapter-6-Arrays)
+- [Chapter 7: Regular Expressions](#-chapter-7-regular-expressions)
+- [Chapter 8: Methods](#chapter-8-methods)
+- [Chapter 9: Style](#chapter-9-style)
+- [Chapter 10: Beautiful Parts](#chapter-10:-beautiful-parts)
 
 ## Chapter 1: Good Parts
 - Javascript is a beautiful language buried under a "steaming pile of good intetions and blunders."
