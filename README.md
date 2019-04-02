@@ -129,6 +129,8 @@ APP.books = {
 - They are used to specify the behavior of objects.
 
 ### Function Objects:
+- Functions are objects linked to **Function.ptrototype**. Function.prototype itself is linked to Object.prototype. See [Object Literals](#object-literals).
+
 ### Function Literals:
 ### Invocation:
 
