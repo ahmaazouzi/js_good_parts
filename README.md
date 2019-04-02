@@ -124,6 +124,14 @@ APP.books = {
 
 ## Chapter 4: Functions
 
+- Js functions are generally well designed, but they also have their terrible parts.
+- They are used for "code reuse, information hiding and composition."
+- They are used to specify the behavior of objects.
+
+### Function Objects:
+### Function Literals:
+### Invocation:
+
 ## Chapter 5: Inheritance
 
 ## Chapter 6: Arrays
