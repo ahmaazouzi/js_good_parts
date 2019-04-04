@@ -90,7 +90,7 @@ book1: {
 
 ### Prototype:
 - "Every object is linked to a prototype object from which it can inherit properties."
-- Object literals are linked to **Object.prototype**.
+- Object literals are linked to `Object.prototype`.
 - The javascript **Object** object (or function???) has a method **create** which is used to create a new object using an "old object as its prototype" as in:
 ```
 var book2 = Object.create(book1); // Now book2 has all the properties of book1
@@ -148,13 +148,13 @@ var name = function(first_name, last_name){
 }
 ```
 - A function is made of 4 parts:
-	1. The **function** reserved word.
+	1. The `function` reserved word.
 	2. The **function name**. This part is optional. It can be used for recursion and by debuggers and developer tools to identify the function. Functions without names are _anonynous_.
 	3. A set of 0 or more **parameters** wrapped in parantheses. The function treats them as variables. They are initialized to the arguments given to the function.
 	4. The **function body** wrapped into curly brackets which is a list of statements which are executed when the function is invoked.
 
 ### Invocation:
-- When a function is invoked, control and parameters are passed to the new function. Two more parameters are passed to the invoked function, namely **this** and **arguments**.
+- When a function is invoked, control and parameters are passed to the new function. Two more parameters are passed to the invoked function, namely `this` and `arguments`.
 - The **this** parameter is essential to object oriented programming. Its value is determined by one of four invocation patterns: method, function, constructor and apply patterns.
 - There is no type checking of arguments and the mismatch between the parameter and argument lengths doesn't cause a runtime error. If there are less arguments than required, other parameters are initialized to _undefined._ If there are more arguments, they are ignored.
 
