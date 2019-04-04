@@ -120,6 +120,10 @@ var APP = {};
 APP.books = {
 	something: "Something"
 }
+
+APP.authors = {
+	something: "Something"
+}
 ```
 
 ## Chapter 4: Functions
@@ -129,10 +133,37 @@ APP.books = {
 - They are used to specify the behavior of objects.
 
 ### Function Objects:
-- Functions are objects linked to **Function.ptrototype**. Function.prototype itself is linked to Object.prototype. See [prototype](#prototype).
+- Functions are objects linked to **Function.ptrototype**. Function.prototype itself is linked to **Object.prototype**. See [prototype](#prototype).
+- Functions also have two hidden properties:
+		1. The context of the function.
+		2. The code that implements the function's behavior.
+- A function also has a **prototype** property. This prototype property's value is a is an object which has a **constructor** property. This constructor property's value is the function itself.
+- Functions are objects (first class citizens). They can be stored in variables, objects and arrays. They can be passed as arguments and returned by functions. They can also have methods. They also get invoked (that's special about functions).
 
 ### Function Literals:
+- An example of a function literal:
+```
+var name = function(first_name, last_name){
+	return first_name + " " + last_name;
+}
+```
+- A function is made of 4 parts:
+	1. The **function** reserved word.
+	2. The **function name**. This part is optional. It can be used for recursion and by debuggers and developer tools to identify the function. Functions without names are _anonynous_.
+	3. A set of 0 or more **parameters** wrapped in parantheses. The function treats them as variables. They are initialized to the arguments given to the function.
+	4. The **function body** wrapped into curly brackets which is a list of statements which are executed when the function is invoked.
+
 ### Invocation:
+- When a function is invoked, control and parameters are passed to the new function. Two more parameters are passed to the invoked function, namely **this** and **arguments**.
+- The **this** parameter is essential to object oriented programming. Its value is determined by one of four invocation patterns: method, function, constructor and apply patterns.
+- There is no type checking of arguments and the mismatch between the parameter and argument lengths doesn't cause a runtime error. If there are less arguments than required, other parameters are initialized to _undefined._ If there are more arguments, they are ignored.
+
+### The Method Invocation Pattern:
+### The Function Invocation Pattern:
+### The Constructor Invocation Pattern:
+### The Apply Invocation Pattern:
+
+
 
 ## Chapter 5: Inheritance
 
