@@ -158,13 +158,27 @@ var name = function(first_name, last_name){
 - There is no type checking of arguments and the mismatch between the parameter and argument lengths doesn't cause a runtime error. If there are less arguments than required, other parameters are initialized to _undefined._ If there are more arguments, they are ignored.h
 - The **this** parameter is essential to object oriented programming. Its value is determined by one of four invocation patterns:
 
-#### 1.The Method Invocation Pattern:
+#### 	1.The Method Invocation Pattern:
+- When a function is the value of an object's property, it's called a method.
+- When a method is invoked, `this` is bound to the object it is a property of.
+- A method uses `this` to retrieve and modify its object's values as showin in the following example:
+```
+var account = {
+	balance: 0,
+	addSomething : function(val){
+		if (typeof this.balance === 'number')
+			this.balance += val;
+		else
+			console.log("Not a valid value!!");
+	}
+};
+```
 
-#### 2. The Function Invocation Pattern:
+#### 	2. The Function Invocation Pattern:
 
-#### 3. The Constructor Invocation Pattern:
+#### 	3. The Constructor Invocation Pattern:
 
-#### 4. The Apply Invocation Pattern:
+#### 	4. The Apply Invocation Pattern:
 
 
 
