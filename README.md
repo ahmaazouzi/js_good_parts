@@ -175,6 +175,10 @@ var account = {
 ```
 
 #### 	2. The Function Invocation Pattern:
+	- When the function is not bound to an object as a method, it's bound to the global object.
+	- sds
+	- fffff
+
 
 #### 	3. The Constructor Invocation Pattern:
 
