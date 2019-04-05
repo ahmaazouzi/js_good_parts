@@ -155,10 +155,11 @@ var name = function(first_name, last_name){
 
 ### Invocation:
 - When a function is invoked, control and parameters are passed to the new function. Two more parameters are passed to the invoked function, namely `this` and `arguments`.
-- The **this** parameter is essential to object oriented programming. Its value is determined by one of four invocation patterns: method, function, constructor and apply patterns.
-- There is no type checking of arguments and the mismatch between the parameter and argument lengths doesn't cause a runtime error. If there are less arguments than required, other parameters are initialized to _undefined._ If there are more arguments, they are ignored.
+- There is no type checking of arguments and the mismatch between the parameter and argument lengths doesn't cause a runtime error. If there are less arguments than required, other parameters are initialized to _undefined._ If there are more arguments, they are ignored.h
+- The **this** parameter is essential to object oriented programming. Its value is determined by one of four invocation patterns:
 
-#### The Method Invocation Pattern:
+	#### 1.The Method Invocation Pattern:
+
 ### The Function Invocation Pattern:
 ### The Constructor Invocation Pattern:
 ### The Apply Invocation Pattern:
