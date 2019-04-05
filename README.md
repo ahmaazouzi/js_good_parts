@@ -158,11 +158,13 @@ var name = function(first_name, last_name){
 - There is no type checking of arguments and the mismatch between the parameter and argument lengths doesn't cause a runtime error. If there are less arguments than required, other parameters are initialized to _undefined._ If there are more arguments, they are ignored.h
 - The **this** parameter is essential to object oriented programming. Its value is determined by one of four invocation patterns:
 
-	#### 1.The Method Invocation Pattern:
+#### 1.The Method Invocation Pattern:
 
-### The Function Invocation Pattern:
-### The Constructor Invocation Pattern:
-### The Apply Invocation Pattern:
+#### 2. The Function Invocation Pattern:
+
+#### 3. The Constructor Invocation Pattern:
+
+#### 4. The Apply Invocation Pattern:
 
 
 
