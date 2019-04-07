@@ -11,7 +11,7 @@ Notes on or summary of **Crockford's** famed **_Javascript, the Good Parts!_** T
 - [Chapter 7: Regular Expressions](#chapter-7-regular-expressions)
 - [Chapter 8: Methods](#chapter-8-methods)
 - [Chapter 9: Style](#chapter-9-style)
-- [Chapter 10: Beautiful Parts](#chapter-10:-beautiful-parts)
+- [Chapter 10: Beautiful Parts](#chapter-10-beautiful-parts)
 
 ## Chapter 1: Good Parts
 - Javascript is a beautiful language buried under a "steaming pile of good intetions and blunders."
@@ -164,21 +164,31 @@ var name = function(first_name, last_name){
 - A method uses `this` to retrieve and modify its object's values as showin in the following example:
 ```
 var account = {
-	balance: 0,
-	addSomething : function(val){
-		if (typeof this.balance === 'number')
-			this.balance += val;
-		else
-			console.log("Not a valid value!!");
-	}
+    balance: 0,
+    addSomething : function(val){
+        if (typeof this.balance === 'number')
+            this.balance += val;
+        else
+            console.log("Not a valid value!!");
+    }
 };
 ```
 
 #### 	2. The Function Invocation Pattern:
-	- When the function is not bound to an object as a method, it's bound to the global object.
-	- sds
-	- fffff
-
+- When the function is not the porperty of an object, it's invoked as a function.
+- When a function is invoked as a function, `this` is bound to the global object (kind of a bad part). An inner function within a method is not bound to the object which owns the method, but it's bound to the global object.
+- The inner function doesn't have access to the `this` of the outer one, but this can be worked around by creating a variable (the name of this variable is usually `that`)in the outer function that stores `this` as in:
+```
+var obj = {
+    method : function(){
+        var that = this;
+        var inner_func = function(){
+            console.log(that);
+    	}
+    	inner_func();
+    }
+};
+```
 
 #### 	3. The Constructor Invocation Pattern:
 
