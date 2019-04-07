@@ -191,9 +191,11 @@ var obj = {
 ```
 
 #### 	3. The Constructor Invocation Pattern:
+- Although the prototypical inheritence pattern is powerful, programmers choose the classical mode. Javascript has a pseudoclassical 
 
 #### 	4. The Apply Invocation Pattern:
-
+- Because js is both oop and functional, a function can have a method.
+- The **apply** method is a method available for functions that is used to invoke functions and allows one to choose the value `this`. It takes two parameters, the first is the value yo br bound yo `this`, and the second one is an array of arguments.
 
 
 ## Chapter 5: Inheritance
