@@ -191,7 +191,26 @@ var obj = {
 ```
 
 #### 	3. The Constructor Invocation Pattern:
-- Although the prototypical inheritence pattern is powerful, programmers choose the classical mode. Javascript has a pseudoclassical 
+- Although the prototypical inheritence pattern of js is powerful, programmers choose the classical mode of languages like java. Javascript has a pseudoclassical mode for the classically minded. It's a Frankenstein designed to mimic the more familiar classical mode.
+- When a function is called with the `new` prefix (this is a little vague! I need more clarification on this):
+	- a new object is created with a link to the function's prototype member.
+	- `this` is bound to the newly created object.
+- Functions used with the `new` prefix are called _**constructors**_. 
+- Constructor functions are always capitalized to stress their nature. 
+- This invocation pattern is just bad. If a constructor function is invoked without a `new` prefix, bad things can happen. 
+```
+var Animal = function(sound){
+	this.sound = sound;
+}
+
+Animal.prototype.getSound = function(){
+	return this.sound;
+
+var cat = new Animal("meow");
+
+console.log(cat.getSound());
+}
+```
 
 #### 	4. The Apply Invocation Pattern:
 - Because js is both oop and functional, a function can have a method.
