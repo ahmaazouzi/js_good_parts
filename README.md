@@ -154,11 +154,11 @@ var name = function(first_name, last_name){
 	4. The **function body** wrapped into curly brackets which is a list of statements which are executed when the function is invoked.
 
 ### Invocation:
-- When a function is invoked, control and parameters are passed to the new function. Two more parameters are passed to the invoked function, namely `this` and `arguments`.
-- There is no type checking of arguments and the mismatch between the parameter and argument lengths doesn't cause a runtime error. If there are less arguments than required, other parameters are initialized to _undefined._ If there are more arguments, they are ignored.h
+- When a function is invoked, control and parameters are passed to the new function. Two more parameters are passed to the invoked function, namely `this` and [`arguments`](#lala).
+- There is no type checking of arguments and the mismatch between the parameter and argument lengths doesn't cause a runtime error. If there are less arguments than required, other parameters are initialized to _undefined._ If there are more arguments, they are ignored.
 - The **this** parameter is essential to object oriented programming. Its value is determined by one of four invocation patterns:
 
-#### 	1.The Method Invocation Pattern:
+#### 	1.The Method Invocation Pattern (and the meaning of `this`):
 - When a function is the value of an object's property, it's called a method.
 - When a method is invoked, `this` is bound to the object it is a property of.
 - A method uses `this` to retrieve and modify its object's values as showin in the following example:
@@ -240,6 +240,20 @@ var dog = {
 
 cat.makeSound.apply(dog);
 ```
+
+### Arguments:
+- In addition to the `this` parameter, the `arguments` array is available to a function when it's invoked. The `arguments` array gives the function access to the arguments supplied to the function including excess arguments. This is why a javascript function can "take an unspecified number of arguments." This allows for great flexibility.
+```
+var meaningless = function(){
+	console.log(arguments.length);
+}
+
+// This allows for a great amount 
+meaningless("A", "b", 77);
+meaningless();
+```
+
+
 
 ## Chapter 5: Inheritance
 
