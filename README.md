@@ -46,6 +46,7 @@ for (myvar in obj){
 }
 ```
 - Js uses '===' for equality instead of the more familiar '=='.
+
 ## Chapter 3: Objects
 
 ### Expressions:
@@ -252,8 +253,51 @@ var meaningless = function(){
 meaningless("A", "b", 77);
 meaningless();
 ```
+- `arguments` is not an actual array but an array-like object, which is quite [problematic](#);
 
+### Exceptions:
+- Like Java and Python, js handles exceptions using the `throw` statement as in the following eample:
 
+```
+// Handles division by zero
+var divide = function(a, b){
+	if (b === 0){
+		throw {
+			name: 'logicError',
+			message: 'Can\'t divide by zero'
+		};
+	};
+
+	return a / b;
+};
+```
+- `throw` is given an object containging some information about the error, by convention, the error's name and message, but it can also have other information.
+- A 'try' and `catch` block is used to catch the error. If an exception is thrown within a try statement, it is caught in the `catch` statement as in:
+```
+var tryDivide = function(){
+	try {
+	    divide(5,0);
+	} catch(e) {
+	    console.log(e.name + ": " + e.message);
+	};
+};
+
+tryDivide();
+```
+
+### Type Augmentation:
+- Basic types can be augmented and acquire new functionality. The book gives some really good examples though they might be a little obscure. The bracket notation is confusing.
+- The examples give, **<Type>.prototype** is augmented like in Number.prototype, Array.prototype, etc.
+
+```
+Array.prototype.middle =  function(){
+    return this[Math.floor((this.length - 1)/2)];
+};
+
+var a = [1,500000, 0];
+a.middle();  //500000
+
+```
 
 ## Chapter 5: Inheritance
 
