@@ -213,9 +213,33 @@ console.log(cat.getSound());
 ```
 
 #### 	4. The Apply Invocation Pattern:
-- Because js is both oop and functional, a function can have a method.
-- The **apply** method is a method available for functions that is used to invoke functions and allows one to choose the value `this`. It takes two parameters, the first is the value yo br bound yo `this`, and the second one is an array of arguments.
+- Because js is both oop and functional, a function can have methods.
+- The **apply** method is a method available for functions that is used to invoke functions and allows one to choose the value of `this`. It takes two parameters, the first is the value to be bound to `this`, and the second one is an array of the function's arguments.
+- An interesting feature of the apply method is it's ability to apply the method's of an object to another object resulting from the ability to choose `this`. 
+```
+// Example 1
+var printName = function(first_name, last_name){
+	return first_name + " " + last_name;
+} 
+// Invoked printName with 'apply' using an array of arguments
+printName.apply(null, ["Moby", "Dick"]);
 
+// Example 2
+var cat = {
+	sound: "meow",
+	makeSound: function(){
+		console.log(this.sound)
+	}
+};
+
+// Here 'this' was changed, so makeSound function, which belongs
+// to the cat object, was applied to dog object which doesn't have that function.
+var dog = {
+	sound : "Howhow"
+};
+
+cat.makeSound.apply(dog);
+```
 
 ## Chapter 5: Inheritance
 
