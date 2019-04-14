@@ -298,6 +298,8 @@ var a = [1,500000, 0];
 a.middle();  //500000
 
 ```
+### Scope:
+- Javascript has function scope, but no block scope. Don't declare variables before use. ALWAYS define them at the top of the function.
 
 ## Chapter 5: Inheritance
 
