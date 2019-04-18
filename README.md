@@ -301,6 +301,9 @@ a.middle();  //500000
 ### Scope:
 - Javascript has function scope, but no block scope. Don't declare variables before use. ALWAYS define them at the top of the function.
 
+### Closure:
+- Inner functions enjoy access to out functions variables. They also have a longer lifespan.
+
 ## Chapter 5: Inheritance
 
 ## Chapter 6: Arrays
