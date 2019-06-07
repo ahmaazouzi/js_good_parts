@@ -303,7 +303,36 @@ a.middle();  //500000
 
 ### Closure:
 - Closures in the context of js are confusing. I hope readig this section will clear things up for me.
-- Inner functions enjoy access to out functions variables. They also have a longer lifespan.
+- Inner functions enjoy access to out functions variables. They also have a longer lifespan, meaning that the inner continues to have access to the variables of the outer function even when the latter has already been executed.
+- Access to outer function variables and the longer lifetime of the inner function allows us to protect data agaainst access from the global scope. They allow for creating effective setters and getters.
+- An IIFE (immediately invoked function expression) is one way of exploiting these two useful features as in:
+
+```java
+// value can be altered from the outside wolrd.
+var obj = {
+	value: 0,
+	increment: function(inc){
+		value += inc;
+	}
+};
+
+// Once obj is executed there is no way of acccessing value
+// except through the setter "increment" and the getter "getValue"
+var obj = (function(){
+	value = 0;
+	return {
+		increment: function(inc){
+			value += inc;
+		},
+		getValue: function(){
+			return	value;
+		}
+	};
+}());
+```
+- In an IIFE, the result of the execution of a function is assigned to a variable, not the function itself.
+- In this example, a an object containing two functions which still have the access to the inner value of outer function is returned. There is no way of accessing the variable `value` except through these functions.
+
 
 ## Chapter 5: Inheritance
 
