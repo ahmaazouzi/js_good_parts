@@ -334,7 +334,15 @@ var obj = (function(){
 - In this example, a an object containing two functions which still have the access to the inner value of outer function is returned. There is no way of accessing the variable `value` except through these functions.
 - A **closure** is an inner function that has access to the context where it was created or the outer function's variables. It has access to the actual variables and not copies of them.
 - Closures are useful in the case of event handlers. I had to learn it the hard way. They are also used for data hiding as mentioned earlier.
-- Using a closure to handle events that have to do DOM element arrays can be hairy, but probably a simple approach is to return an inner function which returns a value, instead of just returning that value. The loop will always finish and only return the last value (Excuse the vagueness).
+- Using a closure to handle events that have to do DOM element arrays can be hairy, but probably a simple approach is to return an inner function which returns a value, instead of just returning that value. The loop will always finish and only return the last value (Excuse the vagueness. I need to review how the DOM works along with event handling and will probably have to come back to this section).
+
+### Callback:
+- I honestly don't know exactly what a callback is.
+- It's something that aids with the asynchronous nature of javascript.
+- I will come back to this section in the future as the example provided is not very clear.
+- .... 
+
+###s
 
 ## Chapter 5: Inheritance
 
