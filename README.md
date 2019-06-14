@@ -340,9 +340,10 @@ var obj = (function(){
 - I honestly don't know exactly what a callback is.
 - It's something that aids with the asynchronous nature of javascript.
 - I will come back to this section in the future as the example provided is not very clear.
-- .... 
+- .... My problem is more with asynchoricity and how it generally works. 
 
-###s
+### Modules:
+- **Modules** are created using functions along with closures or objects. A module presents an interface but hides the data and implementation. Closures can be used along with functions and objects to create modules. Using function as modules can eliminates the problem of global variables.
 
 ## Chapter 5: Inheritance
 
