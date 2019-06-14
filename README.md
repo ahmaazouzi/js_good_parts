@@ -206,11 +206,11 @@ var Animal = function(sound){
 
 Animal.prototype.getSound = function(){
 	return this.sound;
+}
 
 var cat = new Animal("meow");
 
 console.log(cat.getSound());
-}
 ```
 
 #### 	4. The Apply Invocation Pattern:
