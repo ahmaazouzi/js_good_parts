@@ -344,6 +344,8 @@ var obj = (function(){
 
 ### Modules:
 - **Modules** are created using functions along with closures or objects. A module presents an interface but hides the data and implementation. Closures can be used along with functions and objects to create modules. Using function as modules can eliminates the problem of global variables.
+- "The general pattern of a module is a function that defines private variables and function; creates privileged functions which, through closure, will	have access to the private variables and functions; and that returns the privileged functions or stores them in an accessible place".
+- Again, as in the closure example, to make great use of closures, create a function which returns an object whose values are closures which have access to the function's variables. After the outer function is run, the object with the closures is returned. We would generally assign this function to a variable. This variable now holds the value of the returned object. All we have e access to now is that object. We can run the object's closures. The only way the variables of the outer function are accessed is through the object's closures. *This was such a mouthful.*
 
 ## Chapter 5: Inheritance
 
