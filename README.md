@@ -347,6 +347,15 @@ var obj = (function(){
 - "The general pattern of a module is a function that defines private variables and function; creates privileged functions which, through closure, will	have access to the private variables and functions; and that returns the privileged functions or stores them in an accessible place".
 - Again, as in the closure example, to make great use of closures, create a function which returns an object whose values are closures which have access to the function's variables. After the outer function is run, the object with the closures is returned. We would generally assign this function to a variable. This variable now holds the value of the returned object. All we have e access to now is that object. We can run the object's closures. The only way the variables of the outer function are accessed is through the object's closures. *This was such a mouthful.*
 
+### Cascade:
+- For functions meant to change state but return nothing, they can isntead return `this`. This will result in *cascades*, meaning that a chain methods can be called on the same object.
+
+### Currying:
+- The book proposes the method `curry` which can be attached to `Function.prototype`. `curry` enhances the functionality of a function, taking advantage of the fact that a function is also a value. I am not intellectually ready for **currying** at the moment.
+
+### Memoization:
+- This has to do with the so-called dynamic programming. Recursion can result in many many wasted caclulations. By storing the already processed results in say an array, many such wasted calculations can be avoided. There are better places to learn this stuff.
+
 ## Chapter 5: Inheritance
 
 ## Chapter 6: Arrays
