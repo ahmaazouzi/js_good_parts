@@ -357,6 +357,9 @@ var obj = (function(){
 - This has to do with the so-called dynamic programming. Recursion can result in many many wasted caclulations. By storing the already processed results in say an array, many such wasted calculations can be avoided. There are better places to learn this stuff.
 
 ## Chapter 5: Inheritance
+- Some of the points discussed in this chapter are rehashes (or elaborations) on the different function invocation patterns. These two topics are interrelated. Some of those points discussed in that section will be repeated here.
+ 
+### Pseudoclassical inheritence:
 
 ## Chapter 6: Arrays
 
