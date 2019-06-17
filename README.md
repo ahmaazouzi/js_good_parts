@@ -362,6 +362,8 @@ var obj = (function(){
 
 ### Pseudoclassical inheritence:
 - The pseudoclassical inheritence pattern is related to the cons [function constructor invocation pattern](#3-the-Constructor-Invocation-Pattern).
+- Everytime a function object is created, it is a given a `prototype` property. The prorotype property's value is an object containing a `constructor` property. The value of this constructor is the function object itself.
+- The `prototype` object is "the place where inherited traits are to be deposited."
 
 ## Chapter 6: Arrays
 
