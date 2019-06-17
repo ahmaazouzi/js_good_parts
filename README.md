@@ -361,7 +361,7 @@ var obj = (function(){
 - Js has much richer (or rather confusing) set of inheritence patterns. Prototypical inheritence, meaning that an object can iherit directly from another object, is the default pattern. Javascript does also have a pseudoclassical pattern which is can be confusing.
 
 ### Pseudoclassical inheritence:
-- The pseudoclassical inheritence pattern is related to the cons [function constructor invocation pattern](#the-Constructor-Invocation-Pattern).
+- The pseudoclassical inheritence pattern is related to the cons [function constructor invocation pattern](#3-the-Constructor-Invocation-Pattern).
 
 ## Chapter 6: Arrays
 
