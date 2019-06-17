@@ -357,9 +357,11 @@ var obj = (function(){
 - This has to do with the so-called dynamic programming. Recursion can result in many many wasted caclulations. By storing the already processed results in say an array, many such wasted calculations can be avoided. There are better places to learn this stuff.
 
 ## Chapter 5: Inheritance
-- Some of the points discussed in this chapter are rehashes (or elaborations) on the different function invocation patterns. These two topics are interrelated. Some of those points discussed in that section will be repeated here.
- 
+- Some of the points discussed in this chapter are rehashes (or elaborations) on the different function invocation patterns. Inheritence and function invocation patterns are interrelated. Some of those points discussed in that section will be repeated here.
+- Js has much richer (or rather confusing) set of inheritence patterns. Prototypical inheritence, meaning that an object can iherit directly from another object, is the default pattern. Javascript does also have a pseudoclassical pattern which is can be confusing.
+
 ### Pseudoclassical inheritence:
+- The pseudoclassical inheritence pattern is related to the cons [function constructor invocation pattern](#the-Constructor-Invocation-Pattern).
 
 ## Chapter 6: Arrays
 
