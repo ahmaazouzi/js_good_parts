@@ -16,7 +16,7 @@ Notes on or summary of **Crockford's** famed **_Javascript, the Good Parts!_** T
 ## Chapter 1: Good Parts
 - Javascript is a beautiful language buried under a "steaming pile of good intetions and blunders."
 - Js is Lisp in C's clothing.
-- Js has many bads parts and design issues. It still has its fair share of good parts. Crockford suggests using a subset of the language that is entirely made of those good parts, ignoring the restp. 
+- Js has many bads parts and design issues. It still has its fair share of good parts. Crockford suggests using a subset of the language that is entirely made of those good parts, ignoring the rest. 
 - The book is about the language and not about the DOM or AJAX. 
 - Lambdas were built into the language from the beginning. They are a good parts.
 - Other good parts include: loose typing, dynamic objects, an expressive object literal notation.
@@ -35,7 +35,7 @@ Notes on or summary of **Crockford's** famed **_Javascript, the Good Parts!_** T
 - A js character is 16-bit wide.
 - Strings are immutable and + is used for concatenation. String.length 
 
-### Statments:
+### Statements:
 - A **block** (a group of statements enclosed by squiggly brackets) **DOES NOT** create a new scope.
 - The **for in** construct (also available in python as well) is present in js and can be used this way:
 ```java
@@ -50,7 +50,7 @@ for (myvar in obj){
 ## Chapter 3: Objects
 
 ### Expressions:
-- An expression is a statment that **gives a value**???!!!! (It works on a value). Assigning a value to a variable, invoking a method or deleting a property from an object are all examples of an expression. 
+- An expression is a statement that **gives a value**???!!!! (It works on a value). Assigning a value to a variable, invoking a method or deleting a property from an object are all examples of an expression. 
 - Expressions also include built in values such as (null, NaN, Infinity, true, false, undefined).
 - **typeof(_variable_)** produces one of 6 values: 'number', 'string', 'boolean', 'undefined', 'function', 'object'.
 
@@ -75,8 +75,8 @@ book1: {
 
 ## Chapter 3: Objects
 - types like number, string are object-like in that they have methods, but they are immutable. Objects like functions, arrays and objects are **"mutable keyed collections."**
-- An object is a container of properties. Each property has a name and a value. A name can be any string including an empty string. A value can be of any value except _underfined.-
-- Prototype linkeage allows an object to inherit the properties of another onject.
+- An object is a container of properties. Each property has a name and a value. A name can be any string including an empty string. A value can be of any value except _undefined.-
+- Prototype linkeage allows an object to inherit the properties of another object.
 
 ### Object Literals:
 - Objects can be nested.
@@ -382,6 +382,21 @@ Animal.prototype.getSound = function(){
 var cat = new Animal("meow");
 console.log(cat.getSound()); // prints 'meow'
 ```
+- To perform pseudo-classical inheritance, a new class is created and its prototype is replaced by an instance of the class to be inherited from as in:
+```java
+var Cat = function(name) {
+	this.name = name;
+};
+
+Cat.prototype = new Animal();
+Cat.prototype.purr = function(){
+	console.log("purr!");
+};
+```
+- The book proposes an `inherits` method that helps simplify the pseudo-classical inheritance pattern which I don't need. I have no use for such method.
+- pseudo-classical inheritance has no privacy. "There is no access to `super` methods."
+- If you forget the `new` keyword, `this` is bound to the global object resulting in possibly messing the whole program. This can happen without errors or warnings.
+- This pattern was cooked up to accommodate programmers coming from the Java and C++ OOP world. There is no point of using it in Javascript considering how complicated and error-prone it is.
 
 ## Chapter 6: Arrays
 
