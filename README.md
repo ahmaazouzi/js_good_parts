@@ -176,7 +176,7 @@ var account = {
 ```
 
 #### 	2. The Function Invocation Pattern:
-- When the function is not the porperty of an object, it's invoked as a function.
+- When the function is not the property of an object, it's invoked as a function.
 - When a function is invoked as a function, `this` is bound to the global object (kind of a bad part). An inner function within a method is not bound to the object which owns the method, but it's bound to the global object.
 - The inner function doesn't have access to the `this` of the outer one, but this can be worked around by creating a variable (the name of this variable is usually `that`)in the outer function that stores `this` as in:
 ```java
@@ -360,9 +360,9 @@ var obj = (function(){
 - Some of the points discussed in this chapter are rehashes (or elaborations) on the different function invocation patterns. Inheritence and function invocation patterns are interrelated. Some of those points discussed in that section will be repeated here.
 - Js has much richer (or rather confusing) set of inheritence patterns. Prototypical inheritence, meaning that an object can iherit directly from another object, is the default pattern. Javascript does also have a pseudoclassical pattern which is can be confusing.
 
-### Pseudoclassical inheritence:
-- The pseudoclassical inheritence pattern is related to the [constructor invocation pattern](#3-the-Constructor-Invocation-Pattern).
-- Everytime a function object is created, it is a given a `prototype` property. The prorotype property's value is an object containing a `constructor` property. The value of this constructor is the function object itself.
+### Pseudo-classical inheritance:
+- The pseudo-classical inheritance pattern is related to the [constructor invocation pattern](#3-the-Constructor-Invocation-Pattern).
+- Every time a function object is created, it is a given a `prototype` property. The prorotype property's value is an object containing a `constructor` property. The value of this constructor is the function object itself.
 - The `prototype` object is "the place where inherited traits are to be deposited."
 - To create a class (or rather a pseudo-class), a constructor is defined as in: 
 ```java
@@ -397,6 +397,50 @@ Cat.prototype.purr = function(){
 - pseudo-classical inheritance has no privacy. "There is no access to `super` methods."
 - If you forget the `new` keyword, `this` is bound to the global object resulting in possibly messing the whole program. This can happen without errors or warnings.
 - This pattern was cooked up to accommodate programmers coming from the Java and C++ OOP world. There is no point of using it in Javascript considering how complicated and error-prone it is.
+
+### Object Specifiers:
+- Instead of making the constructor take a very long array of parameters and having to remember	the order in which the parameters need to be given, the constructor can be offered a single object containing the parameters which can then be listed in any order as in:
+```java
+var obj = maker({
+	first: f,
+	last: l,
+	middle: m,
+	state: s,
+	city: c
+});
+```
+instead of: 
+```java
+var obj = maker(f, l, m, c, s);
+```
+
+### Prototypal (Prototypical) Inheritance:
+- This pattern is substantially simpler than the classical pattern. Create an object and then just use `Object.creat(<parent-obj>)` and then customize the new object if applicable:
+```java
+var animal = {
+	name: "animalo",
+	sound: "how how!",
+	get_name: function(){
+		return this.name;
+	},
+	get_sound: function(){
+		return this.sound;
+	}
+};
+
+var cat = Object.create(animal);
+cat.name = "Cat";
+cat.get_sound = function(){
+	return this.sound;
+}
+cat.sound = "meow";
+cat.get_sound();
+```
+
+### Functional Inheritance:
+-
+
+
 
 ## Chapter 6: Arrays
 
