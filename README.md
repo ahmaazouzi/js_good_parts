@@ -361,9 +361,27 @@ var obj = (function(){
 - Js has much richer (or rather confusing) set of inheritence patterns. Prototypical inheritence, meaning that an object can iherit directly from another object, is the default pattern. Javascript does also have a pseudoclassical pattern which is can be confusing.
 
 ### Pseudoclassical inheritence:
-- The pseudoclassical inheritence pattern is related to the cons [function constructor invocation pattern](#3-the-Constructor-Invocation-Pattern).
+- The pseudoclassical inheritence pattern is related to the [constructor invocation pattern](#3-the-Constructor-Invocation-Pattern).
 - Everytime a function object is created, it is a given a `prototype` property. The prorotype property's value is an object containing a `constructor` property. The value of this constructor is the function object itself.
 - The `prototype` object is "the place where inherited traits are to be deposited."
+- To create a class (or rather a pseudo-class), a constructor is defined as in: 
+```java
+var Animal = function(sound){
+	this.sound = sound;
+}
+```
+- The class prototype can be augmented (methods added to the class) as follows:
+
+```java
+Animal.prototype.getSound = function(){
+	return this.sound;
+}
+```
+- Creating an `Animal` object (instantiating the `Animal` class) is done as follows:
+```java 
+var cat = new Animal("meow");
+console.log(cat.getSound()); // prints 'meow'
+```
 
 ## Chapter 6: Arrays
 
