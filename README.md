@@ -440,6 +440,34 @@ cat.get_sound();
 ### Functional Inheritance:
 - Pseudo-classical and prototypal inheritance patterns don't preserve privacy. Functional inheritance pattern can achieve privacy.
 - The explanation of how functional inheritance is a little tedious, although the example provided is almost self explanatory.
+- This is my understanding of how functional inheritance works: the parent object is a function that contains a `that` object (say an object literal, for simplicity). The function also has inner functions that enjoy access to that object. The outer function returns `that`. For the child object, it simply assign a call to the parent function (object) to its `that` to inherit all its properties.
+```java
+var animal = function(spec){
+	that = {};
+
+	that.get_name = function(){
+		return spec.name;
+	};
+
+	that.get_sound = function(){
+		return spec.sound
+	}
+	return that;
+};
+
+var cat = function(spec){
+	that = animal(spec);
+
+	that.purr= function(){
+		return "purr";
+	};
+
+	that.scratch = function(){
+		return "ghghhghghg";
+	}
+	return that;
+};
+```
 
 
 
