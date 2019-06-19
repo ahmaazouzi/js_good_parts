@@ -438,7 +438,8 @@ cat.get_sound();
 ```
 
 ### Functional Inheritance:
--
+- Pseudo-classical and prototypal inheritance patterns don't preserve privacy. Functional inheritance pattern can achieve privacy.
+- The explanation of how functional inheritance is a little tedious, although the example provided is almost self explanatory.
 
 
 
