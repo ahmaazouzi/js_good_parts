@@ -38,7 +38,7 @@ Notes on or summary of **Crockford's** famed **_Javascript, the Good Parts!_** T
 ### Statements:
 - A **block** (a group of statements enclosed by squiggly brackets) **DOES NOT** create a new scope.
 - The **for in** construct (also available in python as well) is present in js and can be used this way:
-```java
+```javascript
 for (myvar in obj){
 	if (obj.hasOwnProperty(myvar)){
 		...
@@ -58,7 +58,7 @@ for (myvar in obj){
 ### Literals:
 - Object literals are convenient and clever way to define new objects.
 - Property names can be names or strings, so:
-```java
+```javascript
 book1: {
 	title: "Javascript, the Good Parts"
 	edition: 2
@@ -115,7 +115,7 @@ var book2 = Object.create(book1); // Now book2 has all the properties of book1
 ### Global Abatment:
 - Global variables are the bane of javascript. To reduce the problems associated with that, a single global variable can be created for the whole application. That single global should act as a container for the app. This is seems to be a standard practice nowadays with the use of app or APP in js applications.
 
-```java
+```javascript
 var APP = {};
 
 APP.books = {
@@ -143,7 +143,7 @@ APP.authors = {
 
 ### Function Literals:
 - An example of a function literal:
-```java
+```javascript
 var name = function(first_name, last_name){
 	return first_name + " " + last_name;
 }
@@ -163,7 +163,7 @@ var name = function(first_name, last_name){
 - When a function is the value of an object's property, it's called a method.
 - When a method is invoked, `this` is bound to the object it is a property of.
 - A method uses `this` to retrieve and modify its object's values as showin in the following example:
-```java
+```javascript
 var account = {
     balance: 0,
     addSomething : function(val){
@@ -179,7 +179,7 @@ var account = {
 - When the function is not the property of an object, it's invoked as a function.
 - When a function is invoked as a function, `this` is bound to the global object (kind of a bad part). An inner function within a method is not bound to the object which owns the method, but it's bound to the global object.
 - The inner function doesn't have access to the `this` of the outer one, but this can be worked around by creating a variable (the name of this variable is usually `that`)in the outer function that stores `this` as in:
-```java
+```javascript
 var obj = {
     method : function(){
         var that = this;
@@ -199,7 +199,7 @@ var obj = {
 - Functions used with the `new` prefix are called _**constructors**_. 
 - Constructor functions are always capitalized to stress their nature. 
 - This invocation pattern is just bad. If a constructor function is invoked without a `new` prefix, bad things can happen. 
-```java
+```javascript
 var Animal = function(sound){
 	this.sound = sound;
 }
@@ -217,7 +217,7 @@ console.log(cat.getSound());
 - Because js is both oop and functional, a function can have methods.
 - The **apply** method is a method available for functions that is used to invoke functions and allows one to choose the value of `this`. It takes two parameters, the first is the value to be bound to `this`, and the second one is an array of the function's arguments.
 - An interesting feature of the apply method is it's ability to apply the method's of an object to another object resulting from the ability to choose `this`. 
-```java
+```javascript
 // Example 1
 var printName = function(first_name, last_name){
 	return first_name + " " + last_name;
@@ -244,7 +244,7 @@ cat.makeSound.apply(dog);
 
 ### Arguments:
 - In addition to the `this` parameter, the `arguments` array is available to a function when it's invoked. The `arguments` array gives the function access to the arguments supplied to the function including excess arguments. This is why a javascript function can "take an unspecified number of arguments." This allows for great flexibility.
-```java
+```javascript
 var meaningless = function(){
 	console.log(arguments.length);
 }
@@ -258,7 +258,7 @@ meaningless();
 ### Exceptions:
 - Like Java and Python, js handles exceptions using the `throw` statement as in the following eample:
 
-```java
+```javascript
 // Handles division by zero
 var divide = function(a, b){
 	if (b === 0){
@@ -273,7 +273,7 @@ var divide = function(a, b){
 ```
 - `throw` is given an object containging some information about the error, by convention, the error's name and message, but it can also have other information.
 - A 'try' and `catch` block is used to catch the error. If an exception is thrown within a try statement, it is caught in the `catch` statement as in:
-```java
+```javascript
 var tryDivide = function(){
 	try {
 	    divide(5,0);
@@ -289,7 +289,7 @@ tryDivide();
 - Basic types can be augmented and acquire new functionality. The book gives some really good examples though they might be a little obscure. The bracket notation is confusing.
 - The examples give, **<Type>.prototype** is augmented like in Number.prototype, Array.prototype, etc.
 
-```java
+```javascript
 Array.prototype.middle =  function(){
     return this[Math.floor((this.length - 1)/2)];
 };
@@ -307,7 +307,7 @@ a.middle();  //500000
 - Access to outer function variables and the longer lifetime of the inner function allows us to protect data agaainst access from the global scope. They allow for creating effective setters and getters.
 - An IIFE (immediately invoked function expression) is one way of exploiting these two useful features as in:
 
-```java
+```javascript
 // value can be altered from the outside wolrd.
 var obj = {
 	value: 0,
@@ -365,25 +365,25 @@ var obj = (function(){
 - Every time a function object is created, it is a given a `prototype` property. The prorotype property's value is an object containing a `constructor` property. The value of this constructor is the function object itself.
 - The `prototype` object is "the place where inherited traits are to be deposited."
 - To create a class (or rather a pseudo-class), a constructor is defined as in: 
-```java
+```javascript
 var Animal = function(sound){
 	this.sound = sound;
 }
 ```
 - The class prototype can be augmented (methods added to the class) as follows:
 
-```java
+```javascript
 Animal.prototype.getSound = function(){
 	return this.sound;
 }
 ```
 - Creating an `Animal` object (instantiating the `Animal` class) is done as follows:
-```java 
+```javascript
 var cat = new Animal("meow");
 console.log(cat.getSound()); // prints 'meow'
 ```
 - To perform pseudo-classical inheritance, a new class is created and its prototype is replaced by an instance of the class to be inherited from as in:
-```java
+```javascript
 var Cat = function(name) {
 	this.name = name;
 };
@@ -400,7 +400,7 @@ Cat.prototype.purr = function(){
 
 ### Object Specifiers:
 - Instead of making the constructor take a very long array of parameters and having to remember	the order in which the parameters need to be given, the constructor can be offered a single object containing the parameters which can then be listed in any order as in:
-```java
+```javascript
 var obj = maker({
 	first: f,
 	last: l,
@@ -410,13 +410,13 @@ var obj = maker({
 });
 ```
 instead of: 
-```java
+```javascript
 var obj = maker(f, l, m, c, s);
 ```
 
 ### Prototypal (Prototypical) Inheritance:
 - This pattern is substantially simpler than the classical pattern. Create an object and then just use `Object.creat(<parent-obj>)` and then customize the new object if applicable:
-```java
+```javascript
 var animal = {
 	name: "animalo",
 	sound: "how how!",
