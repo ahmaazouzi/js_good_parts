@@ -468,12 +468,16 @@ var cat = function(spec){
 	return that;
 };
 ```
+- "Superior methods?" I have node idea what that methods.
 
-
+### Parts:
+- I don't understand what the author is trying to say here; might come back to it in the future. 
 
 ## Chapter 6: Arrays
 
 ## Chapter 7: Regular Expressions
+- I don't think I have enough knowledge to understand this chapter. A *noncapturing group*?! What the hell is that?!
+- I might come back to this chapter after acquiring some basic understanding general regex theory and syntax.
 
 ## Chapter 8: Methods
 
