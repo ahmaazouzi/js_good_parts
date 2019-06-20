@@ -468,12 +468,46 @@ var cat = function(spec){
 	return that;
 };
 ```
-- "Superior methods?" I have node idea what that methods.
+- "Superior methods?" I have no idea what that means.
 
 ### Parts:
 - I don't understand what the author is trying to say here; might come back to it in the future. 
 
 ## Chapter 6: Arrays
+- Js arrays are not real arrays (contiguous chunks of memory). Although js arrays are much slower than real arrays and not different from other arrays, they have a useful literal format and built-in methods.
+
+### Array Literals:
+- A js array literal is very similar to an object literal, except that an array literal inherits from `Array.prototype`, while an object literal inherits from `Object.prototype`. Array literals have more useful methods and properties such as the "mysterious `length` property". 
+- A js array can hold data of different types such as numbers, strings and other arrays.
+
+### Length:
+- The length of an array is the largest integer property name (pseudo-subscript) in the array plus 1.
+- The length of an array is not necessarily the number of elements stored in an array.
+- The length can be set explicitly. Making it larger "does not allocate more space." Making it smaller causes values that are equal or larger than the new length to be deleted.
+- An element can be appended to the array using the array length as a "supscript." This same operation can also be done with the `push` method.
+
+### Delete:
+- The delete operator empties a property. It creates a hole in the array leaving an `undefined` (or empty) value. It works as follow:
+```java
+var nums = [1, 2, 3];
+delete nums[1];
+// Now nums is [1, undefined, 3] or [1, empty, 3]
+```
+- To avoid this anomaly, you need to decrease the subscript of every element to the right of the deleted element. The `splice` method is useful method that handles this situation. It takes two arguments. The first argument is the element "position" in the array. The second argument is the number of elements to be deleted. 
+```java 
+var nums = [1,2,3,4,5,6];
+nums.splice(1,3);
+// Results in [1, 5, 6]
+```
+- Splicing is an expensive operation.
+
+### Enumeration:
+- `for in` is bad and makes no guarantees about the order of properties in an array. To iterate over an array just use the classic `for (i = 0; i < array.length; i++)`
+### Confusion:
+
+### Methods:
+
+### Dimensions:
 
 ## Chapter 7: Regular Expressions
 - I don't think I have enough knowledge to understand this chapter. A *noncapturing group*?! What the hell is that?!
