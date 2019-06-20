@@ -441,7 +441,7 @@ cat.get_sound();
 - Pseudo-classical and prototypal inheritance patterns don't preserve privacy. Functional inheritance pattern can achieve privacy.
 - The explanation of how functional inheritance is a little tedious, although the example provided is almost self explanatory.
 - This is my understanding of how functional inheritance works: the parent object is a function that contains a `that` object (say an object literal, for simplicity). The function also has inner functions that enjoy access to that object. The outer function returns `that`. For the child object, it simply assign a call to the parent function (object) to its `that` to inherit all its properties.
-```java
+```javascript
 var animal = function(spec){
 	that = {};
 
@@ -488,13 +488,13 @@ var cat = function(spec){
 
 ### Delete:
 - The delete operator empties a property. It creates a hole in the array leaving an `undefined` (or empty) value. It works as follow:
-```java
+```javascript
 var nums = [1, 2, 3];
 delete nums[1];
 // Now nums is [1, undefined, 3] or [1, empty, 3]
 ```
 - To avoid this anomaly, you need to decrease the subscript of every element to the right of the deleted element. The `splice` method is useful method that handles this situation. It takes two arguments. The first argument is the element "position" in the array. The second argument is the number of elements to be deleted. 
-```java 
+```javascript
 var nums = [1,2,3,4,5,6];
 nums.splice(1,3);
 // Results in [1, 5, 6]
