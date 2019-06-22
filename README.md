@@ -502,12 +502,25 @@ nums.splice(1,3);
 - Splicing is an expensive operation.
 
 ### Enumeration:
-- `for in` is bad and makes no guarantees about the order of properties in an array. To iterate over an array just use the classic `for (i = 0; i < array.length; i++)`
+- `for in` is bad and makes no guarantees about the order of properties in an array. To iterate over an array just use the classic `for (i = 0; i < array.length; i++)`.
+
 ### Confusion:
+- Crockford clears the water on whether to use an array or an object as a collection, proposing that when "the property names are small sequential integers," an array is to be used.
+- He also proposes a way of distinguishing an array from an object. I personally don't care about this at the moment.
 
 ### Methods:
+- In addition to the built-in set of methods arrays have, you can add your own methods to`Array.prototype` in the same way `Object.prototype` can be augmented as in:
+```javascript
+Array.method('newMethod', function(){
+	// .... function body 
+	});
+```
+- A method can be added directly to a specific array because it is an object. Because the name of the added method is not an integer, the length of the array will not be affected.
+
 
 ### Dimensions:
+- No good support for matrices.
+- Arrays don't get initialized automatically.
 
 ## Chapter 7: Regular Expressions
 - I don't think I have enough knowledge to understand this chapter. A *noncapturing group*?! What the hell is that?!
