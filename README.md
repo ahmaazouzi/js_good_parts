@@ -527,6 +527,8 @@ Array.method('newMethod', function(){
 - I might come back to this chapter after acquiring some basic understanding general regex theory and syntax.
 
 ## Chapter 8: Methods
+The chapter is a rather boring long list of built-in methods with details on the implementation of some. I'll only mention the methods listed in the chapter:
+	1. Array methods: splice, slice, shift, unshift, pop, push, delete.
 
 ## Chapter 9: Style
 
