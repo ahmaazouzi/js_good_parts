@@ -530,13 +530,22 @@ Array.method('newMethod', function(){
 - The chapter is a rather boring long list of built-in methods with details on the implementation of some. I'll only mention the methods listed in the chapter:
 	**1. Array Methods**: concat, join, pop, push, reverse, shift, slice, sort, splice, unshift. 
 	**2. Function**: apply
-	**3. Number**: toExponentia, toFixed, toPrecision, toString.
+	**3. Number**: toExponential, toFixed, toPrecision, toString.
 	**4. Object**: hasOwnProperty.
 	**5. RegExp**: exec, test.
-	**6. String**: charAt, charCodeAt, concat, indexOf, lastIndexOf, localeCompare, match, replace, search, slice, split, substring, toLocaleLowerCase, toLocaleUpperCase, toUpperCase, toLowerCase.  
+	**6. String**: charAt, charCodeAt, concat, indexOf, lastIndexOf, localeCompare, match, replace, search, slice, split, substring, toLocaleLowerCase, toLocaleUpperCase, toUpperCase, toLowerCase, fromCharCode.  
 - I assume the methods listed here are *good parts*.
 
-## Chapter 9: Style
+## Chapter 9: Style 
+- Modifying programs is hard business.
+- "Good programs have a structure that anticipates-but is not overly burdened by- the possible modifications that will be required in the future." Good one, Doug, good one!
+- Avoid not only the bad parts, but the parts that are "often useful but occasionally hazardous."
+- Readability is key.
+- Subjective tips on good style are given. Using braces to wrap blocks and not assuming that indentation is a replacement for braces. One statement per line is a good practice. Consistent style is also good. Insert spaces where helpful.
+- Dough prefers the K&R style for blocks.
+- Use comments as future messages yo yourself or others, but avoid erroneous and useless comments. 
+th good naming, barely need comments.
+- Remember that blocks have no scope, globals are bad and need to be countered by the use of closures and objects... 
 
 ## Chapter 10: Beautiful Parts
  
