@@ -59,17 +59,17 @@ for (myvar in obj){
 - Object literals are convenient and clever way to define new objects.
 - Property names can be names or strings, so:
 ```javascript
-book1: {
-	title: "Javascript, the Good Parts"
+book1 = {
+	title: "Javascript, the Good Parts",
 	edition: 2
-}
+};
 ```
 is the same as:
 ```
-book1: {
-	"title": "Javascript, the Good Parts"
+book1 = {
+	"title": "Javascript, the Good Parts",
 	"edition": 2
-}
+};
 ```
 - property "names are treated as literal names, not as variable names," (I have no idea what this means. It might have to do with the fact that trying to extract the value of a propertu using brackets requires the use of a string for the property name, not plain name).
 
@@ -547,6 +547,12 @@ Array.method('newMethod', function(){
 th good naming, barely need comments.
 - Remember that blocks have no scope, globals are bad and need to be countered by the use of closures and objects... 
 
-## Chapter 10: Beautiful Parts
+## Chapter 10: Beautiful Parts:
+- Doug created (or imagined/conceived) a subset of js he called *Simplified Javascript.* The language consists of the best of the good parts including:
+	1. Functions as first class citizens.
+	2. Dynamic objects with prototypical inheritance.
+	3. Object and array literals.
+- The language also changed how reserved words work. They are used in a function either as variables or as language features. He also added block scope.
+- Basically, the importance of avoiding bad parts and "features" is reiterated and stressed. 
  
 
