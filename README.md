@@ -554,5 +554,16 @@ th good naming, barely need comments.
 	3. Object and array literals.
 - The language also changed how reserved words work. They are used in a function either as variables or as language features. He also added block scope.
 - Basically, the importance of avoiding bad parts and "features" is reiterated and stressed. 
+
+## Appendix A: Awful Parts
+### Global Variables:
+- They are the worst of what js has to offer. They are not just available for use by js, but they are required. 
+- There are three ways of how globals can be defined in js:
+	1. Declared with the `var` keyword outside a function.
+	2. Used without declaration in what is called *implied global.*
+	3. Added to the global object (`window` in browsers).
+## Appendix B: Bad Parts
+
+}
  
 
