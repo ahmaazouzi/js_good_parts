@@ -556,14 +556,20 @@ th good naming, barely need comments.
 - Basically, the importance of avoiding bad parts and "features" is reiterated and stressed. 
 
 ## Appendix A: Awful Parts
+The awful parts are hard to avoid. One is doomed to use them. Being aware of their quirks 
 ### Global Variables:
 - They are the worst of what js has to offer. They are not just available for use by js, but they are required. 
 - There are three ways of how globals can be defined in js:
 	1. Declared with the `var` keyword outside a function.
 	2. Used without declaration in what is called *implied global.*
 	3. Added to the global object (`window` in browsers).
+
+### Scope:
+- Js has the block syntax but a block has no scope which is weird for those coming the c-like languages. To avoid problems related to scope-less blocks, declare all variables at the top of a function isntead right before they are used.
+
+### Semicolon Insersion: 
+
 ## Appendix B: Bad Parts
 
-}
  
 
