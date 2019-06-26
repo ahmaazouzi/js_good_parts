@@ -568,6 +568,14 @@ The awful parts are hard to avoid. One is doomed to use them. Being aware of the
 - Js has the block syntax but a block has no scope which is weird for those coming the c-like languages. To avoid problems related to scope-less blocks, declare all variables at the top of a function isntead right before they are used.
 
 ### Semicolon Insersion: 
+- To avoid erroneous semicolons inserted by JavaScript, use the k&r style of ‘{‘ Insersion. Insert ‘{‘ at the lens of the line instead of the beginning of the next line. 
+
+### Reserved Words:
+- They can only be used as keys in objects with bracket notation while quoted. 
+
+### Unicode
+- Unicode uses now can use a pair of 16-bit characters to represent one character, while js is still restricted to 16-bit characters. Confusion arises between js which thinks that pair is two distinct characters.
+
 
 ## Appendix B: Bad Parts
 
