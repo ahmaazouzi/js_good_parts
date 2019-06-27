@@ -576,6 +576,25 @@ The awful parts are hard to avoid. One is doomed to use them. Being aware of the
 ### Unicode
 - Unicode uses now can use a pair of 16-bit characters to represent one character, while js is still restricted to 16-bit characters. Confusion arises between js which thinks that pair is two distinct characters.
 
+### typeof:
+- This operator tells you the type of a value, but it can be misleading. I personally don't see the utility of such an operator.
+
+### parseInt:
+- `parseInt` function produces an integer from a string, but it only extracts the integer. "10 km" becomes 10.
+- If the string starts with 0, the string is evaluated in octal base. The function also takes a radix. It's advisable to always use it with a radix(base), so `parseInt("9", 10)` evaluates "9" in base 10.
+
+### +
+- This operator operates according the following rules:
+	* If either operand is an empty string, it converts the other to a string.
+	* If bother are numbers, it adds them up.
+	* In every other case, it converts both of them into strings and concatenates them.
+
+### Floating Point:
+- Floats can produce errors like the infamous `0.1 + 0.2 = 0.30000000000000004`. The integer part of a float is always correct. To correct float errors, scale the float (multiply it by 10 or a multiple of 10), do the required operation and then scale the result down. 
+
+### NaN:
+- It means *not a number.* It's produced when an attempt is made to convert a non-numeric string into a number 
+
 
 ## Appendix B: Bad Parts
 
