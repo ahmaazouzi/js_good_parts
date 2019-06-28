@@ -593,10 +593,21 @@ The awful parts are hard to avoid. One is doomed to use them. Being aware of the
 - Floats can produce errors like the infamous `0.1 + 0.2 = 0.30000000000000004`. The integer part of a float is always correct. To correct float errors, scale the float (multiply it by 10 or a multiple of 10), do the required operation and then scale the result down. 
 
 ### NaN:
-- It means *not a number.* It's produced when an attempt is made to convert a non-numeric string into a number 
+- It means *not a number.* It's produced when an attempt is made to convert a non-numeric string into a number.
+- If a `NaN` is an operand in an arithmetic operation, the result is a `NaN`. 
+- `isNaN` can be used to determine if a value is not a number, but it's quite useless. To make sure a value is a valid numerical operand, we can use `typeof` along with `isFinite`. `isFinite` determines if a value is a number, by rejecting infinity and `NaN`. It also tries to convert a string into a number which is bad. The book suggests the following function for determining if a value is a number:
+```javascript
+var isNumber = function isNumber(value) {
+	return typeof value === "number" && isFinite(value);
+}
+```
 
+### Falsy values:
+- null, undefined, 0, "", NaN.. etc. are falsy values. Comparing them using the `==` operator might result in a `true`. 
+- Just use `===` instead of `==`, because `"" == 0` is true.
+- `undefined` and `NaN` are variables whose value can be changed. This is very very very bad!
 
-## Appendix B: Bad Parts
+ **النهاية و يقال لها بالانجليزية "The End"**
 
  
 
