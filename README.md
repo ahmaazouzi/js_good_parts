@@ -607,7 +607,7 @@ var isNumber = function isNumber(value) {
 - Just use `===` instead of `==`, because `"" == 0` is true.
 - `undefined` and `NaN` are variables whose value can be changed. This is very very very bad!
 
- ** "The End" النهاية و يقال لها بالانجليزية **
+ **"The End" النهاية و يقال لها بالانجليزية**
 
  
 
