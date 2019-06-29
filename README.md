@@ -1,6 +1,6 @@
 # js_good_parts
 
-Notes on or summary of **Crockford's** famed **_Javascript, the Good Parts!_** This can be read as a preview of what I think is a worth reading book. Does JSTGP really needs a summary? It's one of the thinnest programming books out there. I would encourage all users of js to read this book. It's not only informative and short. It's very funny and the writing is very clear and to the point.
+Notes for future use on **Crockford's** famed **_Javascript, the Good Parts!_** This can be read as a preview of what I think is a worth reading book, or simply used a quick review of important topics discussed in the book. Does JSTGP really need a summary? It's one of the thinnest programming books out there. I would encourage all users of js to read this book. It's not only informative and short, but also a very funny and the writing is very clear and to the point.
 
 - [Chapter 1: Good Parts](#chapter-1-good-parts)
 - [Chapter 2: Grammar](#chapter-2-grammar) 
